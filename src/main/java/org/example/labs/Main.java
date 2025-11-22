@@ -1,18 +1,24 @@
 package org.example.labs;
 
-public class Main {
+/**
+ * Clase principal para pruebas en el paquete labs.
+ */
+public final class Main {
 
-    public static void main(String[] args) {
-        UserRegistrationService service = new UserRegistrationService();
+    /**
+     * Constructor privado para evitar instancias.
+     */
+    private Main() {
+    }
 
-        // Casos de prueba simples
-        service.registerUser("juan", "123", "juan@correo"); // Contraseña muy corta
-        System.out.println(service.lastErrorMessage);
-
-        service.registerUser(null, "12345678", "correo-sin-arroba"); // username null
-        System.out.println(service.lastErrorMessage);
-
-        service.registerUser("error", "12345678", "error@correo.com"); // fuerza excepción
-        System.out.println(service.lastErrorMessage);
+    /**
+     * Método principal.
+     *
+     * @param args argumentos CLI
+     */
+    public static void main(final String[] args) {
+        System.out.println("Hello Labs!");
+        System.out.println("Ejecutando ejemplo…");
+        System.out.println("Fin de pruebas.");
     }
 }
